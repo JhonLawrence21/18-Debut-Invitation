@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melanie Shane Cabolbol - 18th Debut Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    #loading-screen{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1014,#2c1e24,#1a1014);transition:opacity .8s ease,visibility .8s ease;opacity:1;visibility:visible}
+    #loading-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-rose{font-size:4rem;color:#c9a96e;animation:spin-rose 2s ease-in-out infinite}
+    @keyframes spin-rose{0%{transform:rotate(0deg) scale(1);opacity:.5}50%{transform:rotate(180deg) scale(1.3);opacity:1}100%{transform:rotate(360deg) scale(1);opacity:.5}}
+    .loader-text{font-size:2.8rem;color:#dfc08a;margin-top:20px;font-family:'Great Vibes',cursive}
+    .loader-sub{font-size:1rem;color:#e8a0b4;letter-spacing:4px;text-transform:uppercase;margin-top:8px;font-family:'Playfair Display',serif}
+    .loader-bar{width:200px;height:2px;background:rgba(255,255,255,.1);border-radius:4px;margin-top:30px;overflow:hidden}
+    .loader-fill{width:0%;height:100%;background:linear-gradient(90deg,#e8a0b4,#c9a96e);border-radius:4px;animation:load-fill 2s ease forwards}
+    @keyframes load-fill{to{width:100%}}
+    .loader-enter{margin-top:48px;font-size:clamp(.9rem,2vw,1rem);color:#dfc08a;letter-spacing:4px;text-transform:uppercase;opacity:0;transition:opacity .8s ease;cursor:pointer;padding:16px 32px;border:1px solid rgba(201,169,110,.3);border-radius:50px;font-family:'Playfair Display',serif}
+    .loader-enter.show{opacity:1}
+    .loader-enter:hover{background:rgba(201,169,110,.1)}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-rose">&#10047;</div>
+    <div class="loader-text">Melanie Shane</div>
+    <div class="loader-sub">18th Debut</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-enter" id="loaderEnter"> Tap to Open Invitation </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Floating Petals Container -->
+  <div id="petals-container"></div>
+
+  <!-- Floating Music Button -->
+  <button id="music-btn" class="music-float" aria-label="Toggle Music">
+    <i class="fas fa-music"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">&#10047; MSC</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#countdown">Countdown</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#treasures">18 Treasures</a></li>
+        <li><a href="#candles">18 Candles</a></li>
+        <li><a href="#roses">18 Roses</a></li>
+        <li><a href="#bills">18 Bills</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-slider" id="heroBgSlider">
+      <div class="hero-bg-slide active" style="background-image: url('img/white dress_DSF8912.jpg')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9152.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9179.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9230.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9267.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9382.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9409.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9430.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9434.JPG')"></div>
+      <div class="hero-bg-slide" style="background-image: url('img/_DSF9478.JPG')"></div>
+    </div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle-top">You're Invited to</p>
+      <h1 class="hero-title">Melanie's </h1>
+      <p class="hero-subtitle">18th Debut Celebration</p>
+      <p class="hero-date">June 24, 2026</p>
+      <a href="#rsvp" class="btn-primary glow-btn">Open Invitation</a>
+    </div>
+
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-image fade-in">
+          <div class="portrait-frame">
+            <img class="portrait-img" src="img/_DSF9386.JPG" alt="Melanie Shane" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="portrait-placeholder">
+              <i class="fas fa-camera"></i>
+              <span>Melanie Shane</span>
+            </div>
+            <div class="floral-corner tl"></div>
+            <div class="floral-corner tr"></div>
+            <div class="floral-corner bl"></div>
+            <div class="floral-corner br"></div>
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <h2 class="section-title">Dearly Beloved</h2>
+          <div class="floral-divider">&#10084;&#10084;&#10084;</div>
+          <p class="about-message">
+            With hearts full of gratitude and joy, I warmly invite you to celebrate my 18th birthday with me. This gathering may be simple, but it is made meaningful by the people who choose to be part of it.
+            Please do not feel pressured to bring gifts or anything extravagant — your presence, time, and shared memories are already more than enough for me. What matters most is celebrating this special milestone surrounded by the people I cherish.
+            I hope to share this beautiful evening of laughter, warmth, and unforgettable moments with all of you.
+          </p>
+          <p class="about-signature">— Mels</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COUNTDOWN ========== -->
+  <section id="countdown" class="section countdown">
+    <div class="container">
+      <h2 class="section-title light fade-in">Counting the Days</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <div class="countdown-grid fade-in stagger-children" id="countdownGrid">
+        <div class="countdown-item"><span class="count-num" id="days">00</span><span class="count-label">Days</span></div>
+        <div class="countdown-item"><span class="count-num" id="hours">00</span><span class="count-label">Hours</span></div>
+        <div class="countdown-item"><span class="count-num" id="minutes">00</span><span class="count-label">Minutes</span></div>
+        <div class="countdown-item"><span class="count-num" id="seconds">00</span><span class="count-label">Seconds</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EVENT DETAILS ========== -->
+  <section id="details" class="section details">
+    <div class="container">
+      <h2 class="section-title fade-in">Event Details</h2>
+      <div class="floral-divider fade-in">&#10084;&#10084;&#10084;</div>
+      <div class="details-grid fade-in stagger-children">
+        <div class="detail-card glass">
+          <div class="detail-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Date</h3>
+          <p>June 24, 2026</p>
+          <p class="detail-sub">Wednesday</p>
+        </div>
+        <div class="detail-card glass">
+          <div class="detail-icon"><i class="fas fa-clock"></i></div>
+          <h3>Time</h3>
+          <p>3:00 PM</p>
+          <p class="detail-sub">Afternoon-Evening</p>
+        </div>
+        <div class="detail-card glass">
+          <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h3>Venue</h3>
+          <p>Barreto Beach Resort</p>
+          <p class="detail-sub">Calangahan, Lugait</p>
+        </div>
+       <div class="detail-card glass">
+          <div class="detail-icon"><i class="fas fa-tshirt"></i></div>
+          <h3>Dress Code</h3>
+          <div class="dress-code-list">
+            <div class="dress-code-item">
+              <span class="swatch" style="background:#000;"></span>
+              <p class="dress-code-item-text">Roses — Black</p>
+            </div>
+            <div class="dress-code-item">
+              <span class="swatch" style="background:#fff;"></span>
+              <p class="dress-code-item-text">Candles — White</p>
+            </div>
+            <div class="dress-code-item">
+              <span class="swatch" style="background:#d59bf6;"></span>
+              <p class="dress-code-item-text">Treasurers — Purple</p>
+            </div>
+            <div class="dress-code-item">
+              <span class="swatch" style="background:#0044cc;"></span>
+              <p class="dress-code-item-text">Bills — Blue</p>
+            </div>    
+            <div class="dress-code-item">
+              <span class="swatch" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c4,#d4e8d8,#d8d4e8);"></span>
+              <p class="dress-code-item-text">Family/Visitor — Any Pastel</p>
+            </div>
+          </div>
+          <p class="dress-code-note">NOTE: Refrain from wearing any shade of pink</p>
+        </div> 
+      </div>
+
+      <div class="details-bottom fade-in">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Barreto+Beach+Resort+Calangahan+Lugait+Misamis+Oriental&output=embed&z=15"
+            width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="venue-img-wrap">
+          <img src="img/710794460_1357255109646839_2227143193590627065_n.jpg" alt="Venue" class="venue-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 18 TREASURES ========== -->
+  <section id="treasures" class="section treasures">
+    <div class="container">
+      <h2 class="section-title light fade-in">18 Treasures</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <p class="treasures-intro fade-in">The 18 treasured people and moments in Melanie's heart</p>
+      <div class="treasures-grid fade-in" id="treasuresGrid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 18 CANDLES ========== -->
+  <section id="candles" class="section candles">
+    <div class="container">
+      <h2 class="section-title light fade-in">18 Candles</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <p class="candles-intro fade-in">The 18 special women lighting Melanie's path</p>
+      <div class="candles-grid fade-in" id="candlesGrid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 18 ROSES ========== -->
+  <section id="roses" class="section roses">
+    <div class="container">
+      <h2 class="section-title light fade-in">18 Roses</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <p class="roses-intro fade-in">The 18 special men in Melanie's life</p>
+      <div class="roses-grid fade-in" id="rosesGrid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 18 BILLS ========== -->
+  <section id="bills" class="section bills">
+    <div class="container">
+      <h2 class="section-title light fade-in">18 Bills</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <p class="bills-intro fade-in">The 18 generous souls blessing Melanie's journey</p>
+      <div class="bills-grid fade-in" id="billsGrid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RSVP ========== -->
+  <section id="rsvp" class="section rsvp">
+    <div class="container">
+      <h2 class="section-title light fade-in">RSVP</h2>
+      <div class="floral-divider light fade-in">&#10084;&#10084;&#10084;</div>
+      <p class="rsvp-intro fade-in">Kindly confirm your presence</p>
+      <form class="rsvp-form glass fade-in" id="rsvpForm" novalidate>
+        <div class="form-group">
+          <label for="rsvpName">Full Name</label>
+          <input type="text" id="rsvpName" name="name" required placeholder="Your full name">
+          <span class="form-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="rsvpContact">Facebook Name</label>
+          <input type="text" id="rsvpContact" name="contact" required placeholder="Your Facebook name">
+          <span class="form-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="rsvpAttend">Will you attend?</label>
+          <select id="rsvpAttend" name="attendance" required>
+            <option value="">Select one</option>
+            <option value="Yes">Joyfully Accept</option>
+            <option value="No">Regretfully Decline</option>
+          </select>
+          <span class="form-error"></span>
+        </div>
+
+         <div class="form-group">
+           <label for="rsvpOvernight">Will Overnight(For Friends Only) </label>
+           <select id="rsvpOvernight" name="overnight">
+            <option value="">Select one</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="rsvpMessage">Message for Melanie</label>
+          <textarea id="rsvpMessage" name="message" rows="4" placeholder="Write a heartfelt message..."></textarea>
+          <span class="form-error"></span>
+        </div>
+        <button type="submit" class="btn-primary glow-btn">Send RSVP</button>
+      </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content glass">
+        <span class="modal-close">&times;</span>
+        <div class="modal-icon">&#10084;</div>
+        <h3>Thank You!</h3>
+        <p>Your RSVP has been received.<br>We look forward to celebrating with you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-rose">&#10047;</div>
+      <p class="footer-thanks">Thank you for being part of this special chapter of my life.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/shyneeeieie" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/notsoshyne/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Melanie Shane Cabolbol. All rights reserved.</p>
+      <p class="footer-copy small">CREATED BY: LAWRENCE</p>
+    </div>
+  </footer>
+
+  <!-- Audio Elements -->
+  <audio id="bgMusic1" preload="auto" loop src="Audio/Barbie%20-%20Thumbelina%20(Theme)%20%5BAudio%5D%20_%20Barbie%20Presents%20_%20Thumbelina%20-%20(320%20Kbps)%20(1).mp3"></audio>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
